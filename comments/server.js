@@ -1,11 +1,13 @@
 const express = require('express');
 const { randomBytes } = require('crypto');
+const cors = require('cors');
 
 const app = express();
 
 const commentsByPostId = {};
 
 app.use(express.json({ extended: false }));
+app.use(cors());
 
 app.get('/posts/:id/comments', (req, res) => {
   res.send(commentsByPostId[req.params.id] || []);
