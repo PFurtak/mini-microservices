@@ -1,6 +1,6 @@
 import React from 'react';
 import PostCreate from './PostCreate';
-import PostsList from './PostsList';
+import PostList from './PostList';
 
 export default () => {
   return (
@@ -9,7 +9,7 @@ export default () => {
       <PostCreate />
       <hr />
       <h1>Posts</h1>
-      <PostsList />
+      <PostList />
     </div>
   );
 };
