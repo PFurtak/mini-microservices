@@ -4,11 +4,10 @@ const cors = require('cors');
 const axios = require('axios');
 
 const app = express();
-
-const posts = {};
-
 app.use(express.json({ extended: false }));
 app.use(cors());
+
+const posts = {};
 
 app.get('/posts', (req, res) => {
   res.send(posts);
